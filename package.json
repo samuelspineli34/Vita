@@ -1,0 +1,25 @@
+{
+    "name": "Vita",
+    "version": "1.0.0",
+    "description": "Projeto de simulação de ecossistemas usando Babylon.js e TypeScript.",
+    "main": "dist/index.js",
+    "scripts": {
+      "start": "webpack serve --open",
+      "build": "webpack"
+    },
+    "author": "",
+    "license": "ISC",
+    "types": [
+      "babylonjs",
+      "@types/babylonjs"
+    ],
+    "devDependencies": {
+      "typescript": "^4.0.0",
+      "ts-loader": "^9.0.0",
+      "webpack": "^5.0.0",
+      "webpack-cli": "^4.0.0",
+      "webpack-dev-server": "^4.0.0"
+    }
+}
+  
+
