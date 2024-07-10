@@ -1,8 +1,10 @@
 # Vita
- Simulador biológico, contando com diferentes espécies de animais, plantas e 4 tipos diferentes de biomas.
+ Simulador biológico, contando com diferentes espécies de animais, plantas e 4 tipos diferentes de biomas.//
+Autores: Samuel Spineli //
+Walker Freitas
 
 # Dependência e outras coisas pra rodar o programa 
-npm install
+npm install //
 npm start
 
 O programa roda localmente na porta 9000: http://localhost:9000/
