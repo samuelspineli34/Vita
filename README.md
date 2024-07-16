@@ -4,6 +4,7 @@
 Autores: Samuel Spineli e Walker Freitas
 
 # Dependência e outras coisas pra rodar o programa 
+npm install @babylonjs/gui \
 npm install \
 npm start
 
