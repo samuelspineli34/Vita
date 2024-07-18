@@ -1,0 +1,49 @@
+[gd_scene load_steps=7 format=3 uid="uid://v11mccqj0r1q"]
+
+[ext_resource type="Texture2D" uid="uid://b0ner1dmncjdq" path="res://quadrado_mapa.png" id="1_35mnr"]
+[ext_resource type="Texture2D" uid="uid://dqymuj2d7e3w2" path="res://alisameupelo.jpg" id="1_3842l"]
+[ext_resource type="PackedScene" uid="uid://dv6r6r1yd4tbu" path="res://water.tscn" id="3_b12oi"]
+[ext_resource type="PackedScene" uid="uid://bui45dcf341q5" path="res://food.tscn" id="4_c76xb"]
+
+[sub_resource type="GDScript" id="GDScript_u3yfm"]
+script/source = "extends Node2D
+
+
+# Called when the node enters the scene tree for the first time.
+func _ready():
+	pass # Replace with function body.
+
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta):
+	pass
+"
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_sa2oe"]
+size = Vector2(18, 18)
+
+[node name="Main" type="Node2D"]
+script = SubResource("GDScript_u3yfm")
+
+[node name="QuadradoMapa" type="Sprite2D" parent="."]
+position = Vector2(579, 324)
+scale = Vector2(0.768229, 0.675)
+texture = ExtResource("1_35mnr")
+
+[node name="Animal" type="CharacterBody2D" parent="."]
+motion_mode = 1
+
+[node name="Sprite2D" type="Sprite2D" parent="Animal"]
+position = Vector2(404, 236)
+scale = Vector2(0.0267062, 0.0381356)
+texture = ExtResource("1_3842l")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Animal"]
+position = Vector2(404, 236)
+shape = SubResource("RectangleShape2D_sa2oe")
+
+[node name="Water" parent="." instance=ExtResource("3_b12oi")]
+position = Vector2(476, 227)
+
+[node name="Food" parent="." instance=ExtResource("4_c76xb")]
+position = Vector2(475, 256)
