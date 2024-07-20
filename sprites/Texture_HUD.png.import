@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dqymuj2d7e3w2"
-path="res://.godot/imported/alisameupelo.jpg-450c6e0019c269e722e8d5a4719e39e0.ctex"
+uid="uid://wty1n2m31xix"
+path="res://.godot/imported/Texture_HUD.png-4b2dfc9c5bd1fa2d4e6cd2c43efec241.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://alisameupelo.jpg"
-dest_files=["res://.godot/imported/alisameupelo.jpg-450c6e0019c269e722e8d5a4719e39e0.ctex"]
+source_file="res://sprites/Texture_HUD.png"
+dest_files=["res://.godot/imported/Texture_HUD.png-4b2dfc9c5bd1fa2d4e6cd2c43efec241.ctex"]
 
 [params]
 

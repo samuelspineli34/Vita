@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://v11ghq6wq4ly"]
+
+[ext_resource type="Texture2D" uid="uid://c6p704p62hmjj" path="res://sprites/Plantae.png" id="1_p8dto"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2l0fw"]
+size = Vector2(18, 18)
+
+[node name="Plantae" type="CharacterBody2D"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+visible = false
+shape = SubResource("RectangleShape2D_2l0fw")
+
+[node name="Plantae" type="Sprite2D" parent="."]
+texture = ExtResource("1_p8dto")

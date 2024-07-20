@@ -1,40 +1,56 @@
-# Vita :seedling:
- Simulador biológico, contando com diferentes espécies de animais, plantas e 4 tipos diferentes de biomas.
- 
-Autores: Samuel Spineli e Walker Freitas
+# Sprout Lands Tilemap
+For Godot 4.2. Made in collaboration with [Cup Nooble](https://cupnooble.itch.io/).
 
-# Dependência e outras coisas pra rodar o programa 
-npm install @babylonjs/gui \
-npm install \
-npm start
+[Example on itch.io](https://maaack.itch.io/harvest-hill-gwj-62-edition)  
+![Example Screenshot](/addons/sprout_lands_tilemap/media/Example_Screenshot_1.png)  
 
-O programa roda localmente na porta 9000: http://localhost:9000/
+## Use Case
+Start building worlds with the free [Sprout Lands Asset Pack](https://cupnooble.itch.io/sprout-lands-asset-pack) right away.
 
-# Distribuição dos arquivos
+## Requirements
+1. Download and run [Godot](https://godotengine.org/).
+2. Start a new project and have it open.
+  
+## Installation
 
-A pasta **dist** (abreviação de "distribution") é onde os arquivos de saída compilados são armazenados. Esta pasta é gerada pelo Webpack durante o processo de construção e contém os arquivos finais que serão servidos ao navegador.
+### GitHub
 
-A pasta **src** (abreviação de "source") contém os arquivos de código-fonte do seu projeto, ou seja, o backend e as funções que vão ser usadas posteriormente no frontent (dist).
 
-A pasta **node_modules/** é gerada automaticamente pelo npm (Node Package Manager) onde é instaladas as dependências. 
+1.  Download the latest release version from [GitHub](https://github.com/Maaack/Sprout-Lands-Tilemap/releases/latest).  
+2.  Extract the contents of the archive.
+3.  Move the `addons/sprout_land_tiles` folder into your project's `addons/` folder.  
+4.  Open/Reload the project.  
+5.  Enable the plugin from the Project Settings > Plugins tab.  
+    If it's enabled for the first time,
+    1.  A dialogue window will appear asking to copy the example scenes out of `addons/`.
 
-O arquivo **package.json** é fundamental para o gerenciamento do projeto. Ele contém informações sobre o projeto, como nome, versão, scripts, dependências e desenvolvedores. Alguns pontos importantes:
+## Usage
 
-    dependencies: Lista os pacotes necessários para o funcionamento do seu projeto em tempo de execução.
-    devDependencies: Lista os pacotes necessários apenas durante o desenvolvimento, como ferramentas de compilação e servidores de desenvolvimento.
-    scripts: Define comandos de atalho que você pode executar com **npm run <script>**,
-    Por exemplo, npm start para iniciar o servidor de desenvolvimento e npm build para compilar o projeto.
+The example scene can be opened and worked in directly. If you'd rather start from scratch, here are the instructions.
 
-O arquivo de configuração **tsconfig.json** é usado pelo TypeScript para determinar como o código TypeScript deve ser compilado para JavaScript. Ele inclui opções como o alvo de compilação (ES6), módulo (CommonJS) e diretório de saída.
+1. Start a new scene with a Node2D.  
+![Clicking on 2D Scene](/addons/sprout_lands_tilemap/media/Usage_Screenshot_1.png)
+2. Instantiate a custom scene as a node.  
+![Instatiate a Custom Scene](/addons/sprout_lands_tilemap/media/Usage_Screenshot_2.png)
+3. Locate `SproutLandsTileMap.tscn` and open it. 
+![Open Custom Scene](/addons/sprout_lands_tilemap/media/Usage_Screenshot_4.png)
+4. Confirm the new node is added and selected in the scene tree.
+![Confirm new node](/addons/sprout_lands_tilemap/media/Usage_Screenshot_5.png)
+5. Open the TileMap editor, (if it is not open already).  
+![Selecting TileMap Editor](/addons/sprout_lands_tilemap/media/Usage_Screenshot_6.png)
+6. Select to draw terrains.  
+![Selecting to draw terrains](/addons/sprout_lands_tilemap/media/Usage_Screenshot_7.png)
+7. Select a terrain to draw (ex. Grass)  
+![Selecting Grass Terrain](/addons/sprout_lands_tilemap/media/Usage_Screenshot_8.png)
+8. Draw the terrain (ex. Grass) in the scene view.  
+![Drawing Grass](/addons/sprout_lands_tilemap/media/Usage_Screenshot_9.png)
 
-    compilerOptions: Configurações que controlam a compilação do TypeScript, como a versão do ECMAScript alvo, o módulo, a geração de mapas de fonte, entre outros.
-    include: Especifica quais arquivos e diretórios devem ser incluídos na compilação.
+### Intermediate Usage
 
-O arquivo de configuração **webpack.config.js** é usado pelo Webpack para definir como os arquivos do projeto devem ser processados e empacotados. Ele inclui definições de entrada, saída, regras de carregamento de módulos, servidor de desenvolvimento e plugins.
+You may noticed that only one kind of tile can occupy any given space, while some tiles have transparency and should be placed over others. For this, there are layers that can be changed in the TileMap editor.  
+![Changing TileMap Layers](/addons/sprout_lands_tilemap/media/Usage_Screenshot_10.png)  
+The names are merely for convenience and do not enforce any rules themselves.
 
-    entry: O ponto de entrada do seu aplicativo, onde o Webpack começa a construir a dependência.
-    output: Define onde o arquivo de saída compilado será colocado.
-    module.rules: Define os carregadores (loaders) que processam diferentes tipos de arquivos.
-    devServer: Configura o servidor de desenvolvimento, que serve os arquivos compilados, recarrega a página automaticamente em mudanças de código, entre outras funcionalidades.
-
-O arquivo **package-lock.json** garante que as dependências do seu projeto sejam instaladas de maneira consistente em todas as máquinas e ambientes. Ele bloqueia as versões exatas dos pacotes e suas dependências, garantindo que o ambiente de desenvolvimento, teste e produção utilizem exatamente os mesmos pacotes.
+## Links
+[Attribution](/addons/sprout_land_tiles/ATTRIBUTION.md)  
+[Code License](/addons/sprout_land_tiles/LICENSE.txt)  

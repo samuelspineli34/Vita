@@ -1,0 +1,114 @@
+[gd_scene load_steps=15 format=3 uid="uid://v11mccqj0r1q"]
+
+[ext_resource type="Texture2D" uid="uid://b0ner1dmncjdq" path="res://sprites/quadrado_mapa.png" id="1_she2s"]
+[ext_resource type="Texture2D" uid="uid://ds2i3lvwfjvr2" path="res://sprites/Animalia.png" id="2_lcs7u"]
+[ext_resource type="PackedScene" uid="uid://dv6r6r1yd4tbu" path="res://scenes/water.tscn" id="3_pio2o"]
+[ext_resource type="PackedScene" uid="uid://bui45dcf341q5" path="res://scenes/food.tscn" id="4_uggf8"]
+[ext_resource type="PackedScene" uid="uid://v11ghq6wq4ly" path="res://scenes/plantae.tscn" id="5_jhtnm"]
+[ext_resource type="PackedScene" uid="uid://kjfxc48moix5" path="res://scenes/HUD.tscn" id="6_8pcca"]
+[ext_resource type="PackedScene" uid="uid://b7v7xll0vffqs" path="res://hud_r.tscn" id="7_nl2rj"]
+
+[sub_resource type="GDScript" id="GDScript_u3yfm"]
+script/source = "extends Node2D
+
+
+# Called when the node enters the scene tree for the first time.
+func _ready():
+	pass # Replace with function body.
+
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta):
+	pass
+"
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3fv7p"]
+size = Vector2(960.651, 960)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7p18k"]
+size = Vector2(478.373, 480)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_moe6y"]
+size = Vector2(480.326, 481.481)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_pdlkn"]
+size = Vector2(479.024, 477.037)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_smotx"]
+size = Vector2(481.627, 480)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_sa2oe"]
+size = Vector2(18, 18)
+
+[node name="Main" type="Node2D"]
+script = SubResource("GDScript_u3yfm")
+
+[node name="Map_square" type="Sprite2D" parent="."]
+position = Vector2(606, 324)
+scale = Vector2(0.768229, 0.675)
+texture = ExtResource("1_she2s")
+
+[node name="Collision_map" type="Area2D" parent="Map_square"]
+position = Vector2(0.103333, 0.0925293)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Map_square/Collision_map"]
+position = Vector2(-0.103455, -0.0925598)
+shape = SubResource("RectangleShape2D_3fv7p")
+
+[node name="Collision_desert" type="Area2D" parent="Map_square"]
+modulate = Color(1, 1, 0, 1)
+position = Vector2(-257.736, -247.407)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Map_square/Collision_desert"]
+position = Vector2(16.5966, 7.40741)
+shape = SubResource("RectangleShape2D_7p18k")
+debug_color = Color(0.933333, 1, 0, 0.419608)
+
+[node name="Collision_tundra" type="Area2D" parent="Map_square"]
+position = Vector2(-240.814, 239.167)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Map_square/Collision_tundra"]
+position = Vector2(0.651062, 0.0925903)
+shape = SubResource("RectangleShape2D_moe6y")
+debug_color = Color(0.811765, 0.960784, 0.807843, 0.419608)
+
+[node name="Collision_forest" type="Area2D" parent="Map_square"]
+position = Vector2(241.465, -241.482)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Map_square/Collision_forest"]
+position = Vector2(-0.651001, 1.48167)
+shape = SubResource("RectangleShape2D_pdlkn")
+debug_color = Color(0, 0.6, 0, 0.419608)
+
+[node name="Collision_savannah" type="Area2D" parent="Map_square"]
+position = Vector2(239.512, 238.519)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Map_square/Collision_savannah"]
+position = Vector2(-0.00012207, 1.48145)
+shape = SubResource("RectangleShape2D_smotx")
+
+[node name="Animalia" type="CharacterBody2D" parent="."]
+motion_mode = 1
+
+[node name="Sprite2D" type="Sprite2D" parent="Animalia"]
+position = Vector2(404, 236)
+scale = Vector2(1.00334, 0.990879)
+texture = ExtResource("2_lcs7u")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Animalia/Sprite2D"]
+visible = false
+scale = Vector2(0.996671, 1.0092)
+shape = SubResource("RectangleShape2D_sa2oe")
+
+[node name="Water" parent="." instance=ExtResource("3_pio2o")]
+position = Vector2(427, 236)
+
+[node name="Food" parent="." instance=ExtResource("4_uggf8")]
+position = Vector2(427, 256)
+
+[node name="Plantae" parent="." instance=ExtResource("5_jhtnm")]
+position = Vector2(404, 256)
+
+[node name="HUD_L" parent="." instance=ExtResource("6_8pcca")]
+
+[node name="HUD_R" parent="." instance=ExtResource("7_nl2rj")]

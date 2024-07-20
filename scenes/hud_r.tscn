@@ -1,0 +1,16 @@
+[gd_scene load_steps=2 format=3 uid="uid://b7v7xll0vffqs"]
+
+[ext_resource type="Texture2D" uid="uid://wty1n2m31xix" path="res://sprites/Texture_HUD.png" id="1_2rt4c"]
+
+[node name="HUD_R" type="CanvasLayer"]
+
+[node name="TextureHud" type="TextureRect" parent="."]
+anchors_preset = -1
+anchor_left = 0.841
+anchor_right = 1.0
+offset_left = 0.167969
+offset_bottom = 366.0
+grow_horizontal = 0
+scale = Vector2(1, 1.757)
+texture = ExtResource("1_2rt4c")
+metadata/_edit_use_anchors_ = true

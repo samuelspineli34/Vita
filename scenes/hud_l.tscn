@@ -1,0 +1,65 @@
+[gd_scene load_steps=3 format=3 uid="uid://dio42hd7c68wf"]
+
+[ext_resource type="Texture2D" uid="uid://wty1n2m31xix" path="res://sprites/Texture_HUD.png" id="1_4ckgo"]
+[ext_resource type="FontFile" uid="uid://vxqsbmlofgoq" path="res://addons/texture_fonts/Assets/Fonts/RobotoMono-Medium.ttf" id="2_df7ry"]
+
+[node name="HUD_L" type="CanvasLayer"]
+
+[node name="TextureHud" type="TextureRect" parent="."]
+top_level = true
+texture_filter = 1
+offset_left = 1.0
+offset_top = 1.0
+offset_right = 236.0
+offset_bottom = 649.0
+texture = ExtResource("1_4ckgo")
+
+[node name="Wind" type="Label" parent="."]
+texture_filter = 1
+offset_left = 39.0
+offset_top = 154.0
+offset_right = 333.0
+offset_bottom = 201.0
+theme_override_fonts/font = ExtResource("2_df7ry")
+theme_override_font_sizes/font_size = 15
+text = "Wind: 120 km/h"
+
+[node name="Sunlight" type="Label" parent="."]
+texture_filter = 1
+offset_left = 39.0
+offset_top = 95.0
+offset_right = 291.0
+offset_bottom = 136.0
+theme_override_fonts/font = ExtResource("2_df7ry")
+theme_override_font_sizes/font_size = 15
+text = "Sunlight: 5 uv"
+
+[node name="Temperature" type="Label" parent="."]
+texture_filter = 1
+offset_left = 36.0
+offset_top = 217.0
+offset_right = 342.0
+offset_bottom = 258.0
+theme_override_fonts/font = ExtResource("2_df7ry")
+theme_override_font_sizes/font_size = 15
+text = "Temperature: 36°C"
+
+[node name="Food" type="Label" parent="."]
+texture_filter = 1
+offset_left = 40.0
+offset_top = 364.0
+offset_right = 202.0
+offset_bottom = 405.0
+theme_override_fonts/font = ExtResource("2_df7ry")
+theme_override_font_sizes/font_size = 15
+text = "Food: 34%"
+
+[node name="Water" type="Label" parent="."]
+texture_filter = 1
+offset_left = 40.0
+offset_top = 299.0
+offset_right = 250.0
+offset_bottom = 346.0
+theme_override_fonts/font = ExtResource("2_df7ry")
+theme_override_font_sizes/font_size = 15
+text = "Water: 67%"

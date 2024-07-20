@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://bui45dcf341q5"]
 
-[ext_resource type="Texture2D" uid="uid://cbjnbihswe5u7" path="res://grass.png" id="1_frdt5"]
+[ext_resource type="Texture2D" uid="uid://cbjnbihswe5u7" path="res://sprites/grass.png" id="1_frdt5"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_yscbo"]
 size = Vector2(18, 18)
@@ -8,9 +8,13 @@ size = Vector2(18, 18)
 [node name="Food" type="StaticBody2D"]
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
+modulate = Color(1, 0, 1, 1)
+self_modulate = Color(1, 0, 1, 1)
+light_mask = 0
 position = Vector2(9.53674e-07, 0)
 scale = Vector2(0.0148026, 0.0148026)
 texture = ExtResource("1_frdt5")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+visible = false
 shape = SubResource("RectangleShape2D_yscbo")
